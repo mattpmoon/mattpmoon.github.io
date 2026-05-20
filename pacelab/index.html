@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PaceLab</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>PaceLab</h1>
+    <p>Simple running pace calculator.</p>
+
+    <label for="minutes">Minutes</label>
+    <input id="minutes" type="number" value="35" />
+
+    <label for="seconds">Seconds</label>
+    <input id="seconds" type="number" value="0" />
+
+    <label for="distance">Distance in km</label>
+    <input id="distance" type="number" value="10" />
+
+    <button id="calculate">Calculate pace</button>
+
+    <div class="result">
+      <h2>Result</h2>
+      <p id="paceKm">Pace per km: —</p>
+      <p id="paceMile">Pace per mile: —</p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

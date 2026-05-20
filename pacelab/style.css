@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0a192f;
+    color: #ccd6f6;
+  }
+  
+  .container {
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 24px;
+  }
+  
+  input,
+  button {
+    display: block;
+    width: 100%;
+    margin: 8px 0 18px;
+    padding: 12px;
+    font-size: 16px;
+  }
+  
+  button {
+    background: #64ffda;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .result {
+    margin-top: 24px;
+    padding: 16px;
+    background: #112240;
+  }
