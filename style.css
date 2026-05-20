@@ -20,6 +20,8 @@ body {
   color: var(--text);
   font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .container {
