@@ -1,80 +1,158 @@
-<body>
-  <div class="bg-glow"></div>
+:root {
+  --bg: #0a192f;
+  --text: #8892b0;
+  --heading: #ccd6f6;
+  --accent: #64ffda;
+  --card: #112240;
+}
 
-  <main class="container">
+* {
+  box-sizing: border-box;
+}
 
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#links">Links</a>
-    </nav>
+html {
+  scroll-behavior: smooth;
+}
 
-    <section class="hero" id="home">
-      <p class="eyebrow">mattmoon.net</p>
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  min-height: 100vh;
+}
 
-      <h1>Matt Moon</h1>
+.container {
+  width: min(760px, 88%);
+  margin: 0 auto;
+}
 
-      <h2>
-        Data analytics and other stuff.
-      </h2>
+.bg-glow {
+  position: fixed;
+  top: -200px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(100,255,218,0.08), transparent 70%);
+  pointer-events: none;
+  z-index: -1;
+}
 
-      <p class="intro">
-        Placeholder text for a future portfolio website.
-        This site will contain projects, notes and experiments
-        with data, analytics, running, systems and other stuff.
-      </p>
+nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  padding: 2rem 0;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
 
-      <div class="links">
-        <a href="#">GitHub</a>
-        <a href="#">LinkedIn</a>
-        <a href="#projects">Projects</a>
-        <a href="#">Contact</a>
-      </div>
-    </section>
+.hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-    <section id="about">
-      <h3><span>01.</span> About</h3>
-      <p>
-        I work in workforce analytics and data products.
-        This section will eventually explain who I am, what I do,
-        and what I am interested in building.
-      </p>
-    </section>
+section {
+  padding: 4rem 0;
+}
 
-    <section id="projects">
-      <h3><span>02.</span> Projects</h3>
+.eyebrow {
+  color: var(--accent);
+  font-family: monospace;
+}
 
-      <div class="project-grid">
-        <article class="card">
-          <p class="card-label">Project</p>
-          <h4>Placeholder Project</h4>
-          <p>
-            A short description of a future project will go here.
-          </p>
-          <a href="#">View project →</a>
-        </article>
+h1 {
+  color: var(--heading);
+  font-size: clamp(3rem, 10vw, 5rem);
+  margin: 0;
+  line-height: 1;
+}
 
-        <article class="card">
-          <p class="card-label">Project</p>
-          <h4>Another Project</h4>
-          <p>
-            Another small project, experiment or note can go here.
-          </p>
-          <a href="#">View project →</a>
-        </article>
-      </div>
-    </section>
+h2 {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  margin: 1rem 0 2rem;
+}
 
-    <section id="links">
-      <h3><span>03.</span> Links</h3>
+h3 {
+  color: var(--heading);
+  font-size: 1.5rem;
+}
 
-      <ul class="link-list">
-        <li><a href="#">GitHub</a></li>
-        <li><a href="#">LinkedIn</a></li>
-        <li><a href="#">Strava</a></li>
-        <li><a href="#">Email</a></li>
-      </ul>
-    </section>
+h3 span {
+  color: var(--accent);
+  font-family: monospace;
+  font-size: 1rem;
+}
 
-  </main>
-</body>
+p {
+  line-height: 1.7;
+}
+
+.intro {
+  font-size: 1.1rem;
+  max-width: 600px;
+}
+
+.links {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid #233554;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.card-label {
+  color: var(--accent);
+  font-family: monospace;
+  font-size: 0.8rem;
+}
+
+.card h4 {
+  color: var(--heading);
+  margin-top: 0.5rem;
+}
+
+.link-list {
+  list-style: none;
+  padding: 0;
+}
+
+.link-list li {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  nav {
+    justify-content: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 4rem;
+  }
+}
