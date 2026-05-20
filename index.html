@@ -1,46 +1,80 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Matt Moon</title>
-
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="icon" href="favicon.png">
-</head>
-
 <body>
   <div class="bg-glow"></div>
 
   <main class="container">
 
-    <p class="eyebrow">mattmoon.net</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#links">Links</a>
+    </nav>
 
-    <h1>Matt Moon</h1>
+    <section class="hero" id="home">
+      <p class="eyebrow">mattmoon.net</p>
 
-    <h2>
-      Data Analytics and other stuff
-    </h2>
+      <h1>Matt Moon</h1>
 
-    <p class="intro">
-      Placeholder text for a future portfolio website.
-      This site will contain projects, notes and experiments
-      with stuff...
-    </p>
+      <h2>
+        Data analytics and other stuff.
+      </h2>
 
-    <div class="links">
-      <a href="#">GitHub</a>
-      <a href="#">LinkedIn</a>
-      <a href="#">Projects</a>
-      <a href="#">Contact</a>
-    </div>
+      <p class="intro">
+        Placeholder text for a future portfolio website.
+        This site will contain projects, notes and experiments
+        with data, analytics, running, systems and other stuff.
+      </p>
+
+      <div class="links">
+        <a href="#">GitHub</a>
+        <a href="#">LinkedIn</a>
+        <a href="#projects">Projects</a>
+        <a href="#">Contact</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <h3><span>01.</span> About</h3>
+      <p>
+        I work in workforce analytics and data products.
+        This section will eventually explain who I am, what I do,
+        and what I am interested in building.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h3><span>02.</span> Projects</h3>
+
+      <div class="project-grid">
+        <article class="card">
+          <p class="card-label">Project</p>
+          <h4>Placeholder Project</h4>
+          <p>
+            A short description of a future project will go here.
+          </p>
+          <a href="#">View project →</a>
+        </article>
+
+        <article class="card">
+          <p class="card-label">Project</p>
+          <h4>Another Project</h4>
+          <p>
+            Another small project, experiment or note can go here.
+          </p>
+          <a href="#">View project →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="links">
+      <h3><span>03.</span> Links</h3>
+
+      <ul class="link-list">
+        <li><a href="#">GitHub</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">Strava</a></li>
+        <li><a href="#">Email</a></li>
+      </ul>
+    </section>
 
   </main>
-
 </body>
-</html>
