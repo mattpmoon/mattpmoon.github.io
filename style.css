@@ -38,6 +38,17 @@ body {
   margin-bottom: 1rem;
 }
 
+.bg-glow {
+  position: fixed;
+  top: -200px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(100,255,218,0.08), transparent 70%);
+  pointer-events: none;
+  z-index: -1;
+}
+
 h1 {
   color: var(--heading);
   font-size: clamp(3rem, 10vw, 5rem);
