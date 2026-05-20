@@ -116,3 +116,113 @@ a::after {
 a:hover::after {
   width: 100%;
 }
+nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  padding: 2rem 0;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+.hero {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+h3 {
+  color: var(--heading);
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+h3 span {
+  color: var(--accent);
+  font-family: monospace;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: rgba(17, 34, 64, 0.7);
+  border: 1px solid rgba(100,255,218,0.08);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(100,255,218,0.35);
+}
+
+.card-label {
+  color: var(--accent);
+  font-family: monospace;
+  font-size: 0.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.card h4 {
+  color: var(--heading);
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.link-list {
+  list-style: none;
+  padding: 0;
+}
+
+.link-list li {
+  margin-bottom: 1rem;
+}
+
+::selection {
+  background: rgba(100,255,218,0.25);
+}
+
+body {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+
+  background-size: 40px 40px;
+}
+
+@media (max-width: 768px) {
+
+  body {
+    display: block;
+    padding: 1.5rem 0;
+  }
+
+  nav {
+    justify-content: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 4rem;
+  }
+
+  section {
+    padding: 3rem 0;
+  }
+}
