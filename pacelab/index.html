@@ -11,18 +11,40 @@
     <h1>PaceLab</h1>
     <p>Simple running pace calculator.</p>
 
-    <label for="minutes">Minutes</label>
-    <input id="minutes" type="number" value="35" />
+    <label for="mode">Mode</label>
+    <select id="mode">
+      <option value="pace">Calculate Pace</option>
+      <option value="time">Calculate Race Time</option>
+    </select>
 
-    <label for="seconds">Seconds</label>
-    <input id="seconds" type="number" value="0" />
+    <div id="timeInputs">
+      <label for="minutes">Minutes</label>
+      <input id="minutes" type="number" value="35" />
+    
+      <label for="seconds">Seconds</label>
+      <input id="seconds" type="number" value="0" min="0" max="59" />
+    </div>
 
     <label for="distance">Distance in km</label>
     <input id="distance" type="number" value="10" />
 
+    <div id="paceInputs">
+      <label for="paceMinutes">Pace minutes</label>
+      <input id="paceMinutes" type="number" value="5" />
+    
+      <label for="paceSeconds">Pace seconds</label>
+      <input id="paceSeconds" type="number" value="0" min="0" max="59" />
+    
+      <label for="paceUnit">Pace unit</label>
+      <select id="paceUnit">
+        <option value="km">Per km</option>
+        <option value="mile">Per mile</option>
+      </select>
+    </div>
+
     <button id="calculate">Calculate pace</button>
 
-    <div class="result">
+    <div id="resultBox" class="result">
       <h2>Result</h2>
       <p id="paceKm">Pace per km: —</p>
       <p id="paceMile">Pace per mile: —</p>
